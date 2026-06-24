@@ -55,6 +55,20 @@
 							<div class="main-slide-info">
 								<h2 class="title"><?php the_title(); ?></h2>
 								<p><?php the_content(); ?></p>
+								<ul class="main-slide-benefits" aria-label="Преимущества биопрепаратов">
+									<li>
+										<span class="benefit-number">20+</span>
+										<span class="benefit-text">лет научных разработок</span>
+									</li>
+									<li>
+										<span class="benefit-number">ЭКО</span>
+										<span class="benefit-text">решения для дома и бизнеса</span>
+									</li>
+									<li>
+										<span class="benefit-number">BY</span>
+										<span class="benefit-text">производство в Беларуси</span>
+									</li>
+								</ul>
 									<div class="slide-btn more-box"><a href="<?php the_field('slide-link') ?>">Подробнее</a></div>
 								<!-- <a href="#" class="btn"><span>buy now</span></a> -->
 							</div>
