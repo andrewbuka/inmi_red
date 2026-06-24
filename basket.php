@@ -26,14 +26,14 @@
 	<section class="s-top-sale my-s-top-sale">
         
 
-        <div id="content" class="col-sm-8 " style="margin: 0 auto;"> 
+        <div id="content" class="checkout-page-content"> 
             <div class="empty-basket">
             КОРЗИНА ПУСТА
         </div>   
    
             <div class="simple-content tttt none">        
                     <div id="simplecheckout_form_0">
-                    <div class="simplecheckout">
+                    <div class="simplecheckout checkout-redesign">
                                         
                             
                             
