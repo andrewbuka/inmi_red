@@ -242,39 +242,58 @@
 
 
 
-	<!--================== S-SUBSCRIBE ==================-->
-	<section id="contacts" class="s-subscribe" style="background-image: url(assets/my-img/12.png);">
+	<!--================== S-CONTACTS ==================-->
+	<section id="contacts" class="s-subscribe contacts-section" style="background-image: url(assets/my-img/12.png);">
 		<span class="mask"></span>
-		<!-- <span class="subscribe-effect wow fadeIn" data-wow-duration="1s" style="background-image: url(assets/img/subscribe-effect.svg);"></span> -->
-		<div class="container">
-			<div class="subscribe-left">
-				<h2  class="title"><span>Контакты</span></h2>				
-				<div class="wow fadeInRightBlur lazy" data-wow-duration=".8s" data-wow-delay=".2s">
-					<span>Телефон: </span>
-					<a style="color: #fff;" href="tel:+375447507890">+375 (44) 750-78-90</a>	
-				</div>
-				<div class="wow fadeInRightBlur lazy" data-wow-duration=".8s" data-wow-delay=".4s">
-					<span>Email: </span>
-					<a style="color: #fff;" href="mailto:inmisale@mail.ru">inmisale@mail.ru</a>
+		<div class="container contacts-container">
+			<div class="contacts-panel wow fadeInLeftBlur lazy" data-wow-duration=".8s" data-wow-delay=".1s">
+				<p class="contacts-eyebrow">Связаться с нами</p>
+				<h2 class="title contacts-title"><span>Контакты</span></h2>
+				<p class="contacts-lead">Получите консультацию по препаратам, условиям заказа и сотрудничеству с Институтом микробиологии НАН Беларуси.</p>
+
+				<div class="contacts-list">
+					<div class="contact-card">
+						<span class="contact-card-icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+						<div>
+							<span class="contact-card-label">Телефон</span>
+							<a href="tel:+375447507890">+375 (44) 750-78-90</a>
+						</div>
+					</div>
+
+					<div class="contact-card">
+						<span class="contact-card-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+						<div>
+							<span class="contact-card-label">Email</span>
+							<a href="mailto:inmisale@mail.ru">inmisale@mail.ru</a>
+						</div>
+					</div>
+
+					<div class="contact-card">
+						<span class="contact-card-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+						<div>
+							<span class="contact-card-label">Адрес</span>
+							<span>г. Минск, ул. Академика Купревича, 2</span>
+						</div>
+					</div>
 				</div>
 
-				<div class="wow fadeInRightBlur lazy" data-wow-duration=".8s" data-wow-delay=".3s">
-					<span>Адрес: </span>
-					<span>г. Минск, ул. Академика Купревича, 2</span>
-					
-				</div>
-				<div class="wow fadeInRightBlur lazy" data-wow-duration=".8s" data-wow-delay=".4s">
-					<span>График работы: </span>
-					Пн-Чт: 9:00 - 18:00, Обед: 13:00 - 13:35 <br> Пт: 9:00 - 15:55, Обед: 13:00 - 13:35 <br>
-					Сб-Вс: выходной
+				<div class="contacts-schedule">
+					<span class="contact-card-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+					<div>
+						<span class="contact-card-label">График работы</span>
+						<p>Пн-Чт: 9:00 - 18:00, обед: 13:00 - 13:35</p>
+						<p>Пт: 9:00 - 15:55, обед: 13:00 - 13:35</p>
+						<p>Сб-Вс: выходной</p>
 					</div>
+				</div>
 			</div>
-			
-			<iframe class="wow fadeInRightBlur lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18794.367081731318!2d27.683449!3d53.926487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcebb4d6f6d2b%3A0x1c24ca875beb668c!2z0JjQvdGB0YLQuNGC0YPRgiDQvNC40LrRgNC-0LHQuNC-0LvQvtCz0LjQuCDQndCQ0J0g0JHQtdC70LDRgNGD0YHQuA!5e0!3m2!1sru!2sby!4v1737573509389!5m2!1sru!2sby" width="700" height="300"  style="border:0; max-width: 700px; max-height: 300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			<!-- <img class="wow fadeInRightBlur lazy me" data-wow-duration=".8s" data-wow-delay=".3s" src="assets/my-img/news/me.png" alt="img"> -->
+
+			<div class="contacts-map wow fadeInRightBlur lazy" data-wow-duration=".8s" data-wow-delay=".2s">
+				<iframe title="Институт микробиологии НАН Беларуси на карте" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18794.367081731318!2d27.683449!3d53.926487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcebb4d6f6d2b%3A0x1c24ca875beb668c!2z0JjQvdGB0YLQuNGC0YPRgiDQvNC40LrRgNC-0LHQuNC-0LvQvtCz0LjQuCDQndCQ0J0g0JHQtdC70LDRgNGD0YHQuA!5e0!3m2!1sru!2sby!4v1737573509389!5m2!1sru!2sby" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
 		</div>
 	</section>
-	<!--================ S-SUBSCRIBE END ================-->
+	<!--================ S-CONTACTS END ================-->
 	
 
 	<!--================== S-OUR-NEWS ==================-->
