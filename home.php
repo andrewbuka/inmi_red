@@ -158,11 +158,15 @@
 
 
 	<!--================== S-PRODUCTS ==================-->
-	<section id="fiz-prod" class="s-products">
+	<section id="fiz-prod" class="s-products s-products-fiz">
 		<div class="container">
 			<div class="tab-wrap">
-				<div class="products-title-cover">
-					<h2 class="title">Биопрепараты для физических лиц</h2>
+				<div class="products-title-cover fiz-products-title-cover">
+					<div>
+						<p class="section-kicker">Каталог для дома и хозяйства</p>
+						<h2 class="title">Биопрепараты для физических лиц</h2>
+						<p class="section-lead">Профессиональные биотехнологические решения с понятным назначением, ценой и быстрым добавлением в корзину.</p>
+					</div>
 					<ul class="tab-nav product-tabs ">
 						<li class="item none" rel="tab1"><span>All</span></li>
 						<li class="item none" rel="tab2"><span>Road bike</span></li>
@@ -172,7 +176,7 @@
 				</div>
 				<div class="tabs-content">
 					<div class="tab tab1">
-						<div class="row my-row product-cover ">
+						<div class="row my-row product-cover fiz-product-cover ">
 							<?php
 				global $post;
 				
@@ -186,17 +190,11 @@
 						setup_postdata( $post );
 				?>
 					<div class="prod-container">
-								<div class="product-item" id="<?php the_field('id-prod') ?>">
+								<div class="product-item fiz-product-card" id="<?php the_field('id-prod') ?>">
 									<!-- <span class="top-sale">лидер продаж</span> -->
-									<ul class="product-icon-top">
-										<li>
-											<div>
-												<i class="fa fa-refresh refresh-prod" aria-hidden="true"></i>
-											</div>
-										</li>										
-									</ul>
+									<div class="product-card-badge">Для физ. лиц</div>
 
-									<a href="<?php the_field('fiz-prod-link') ?>" class="product-img">
+									<a href="<?php the_field('fiz-prod-link') ?>" class="product-img fiz-product-img">
 										<img class="lazy" src="<?php the_field('card-img') ?>" data-src="<?php the_field('card-img') ?>" alt="product">
 									</a>
 
@@ -207,14 +205,14 @@
 										</div>
 
 
-										<h6 class="prod-title">
-											<a href="<?php the_field('fiz-prod-link') ?>" style="background: rgba(255, 217, 16, 0.6);">
+										<h6 class="prod-title fiz-prod-title">
+											<a href="<?php the_field('fiz-prod-link') ?>">
 												<?php the_title(); ?><br>
 											</a>
 										</h6>
 										<div class="btn btn-buy"><span>Купить</span></div>
 
-										<span style="background: rgba(255, 217, 16, 0.6);" class="in-basket-p none">В корзине <span  class="in-basket-span">1</span> шт.</span>
+										<span class="in-basket-p none">В корзине <span  class="in-basket-span">1</span> шт.</span>
 
 										<div class="add-to-card-box none">
 											<input min="1" type="number" class="add-to-card-input" value="1">
@@ -222,6 +220,7 @@
 										</div>
 									</div>
 									<div class="prod-info my-prod-info">
+										<p class="prod-info-label">Назначение</p>
 										<ul class="prod-list">
 											<li><?php the_content(); ?></li>
 										

@@ -1059,3 +1059,241 @@
         display: none;
     }
 }
+
+/* Professional product cards for individual customers on the homepage */
+.s-products-fiz {
+    padding-top: 118px;
+    background: linear-gradient(180deg, #fafafa 0%, #f4f7f5 100%);
+}
+
+.fiz-products-title-cover {
+    align-items: flex-start;
+    margin-bottom: 42px;
+}
+
+.fiz-products-title-cover .title {
+    margin-bottom: 14px;
+    line-height: .95;
+}
+
+.section-kicker {
+    margin-bottom: 10px;
+    color: #246e49;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.section-lead {
+    max-width: 680px;
+    color: #65696C;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+.fiz-product-cover {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.fiz-product-cover .prod-container {
+    display: flex;
+    width: calc(33.333% - 20px);
+    max-width: 370px;
+}
+
+.fiz-product-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    margin-bottom: 32px;
+    padding-top: 0;
+    overflow: hidden;
+    border: 1px solid rgba(36, 110, 73, .12);
+    border-radius: 18px;
+    box-shadow: 0 18px 48px rgba(25, 35, 48, .08);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.fiz-product-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(36, 110, 73, .28);
+    border-radius: 18px;
+    box-shadow: 0 26px 60px rgba(25, 35, 48, .14);
+}
+
+.product-card-badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+    padding: 6px 12px 5px;
+    border-radius: 999px;
+    background: rgba(36, 110, 73, .1);
+    color: #246e49;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.fiz-product-img {
+    height: 250px;
+    margin: 18px 18px 0;
+    background: radial-gradient(circle at 50% 42%, #ffffff 0%, #eef4f0 100%);
+    border-radius: 16px;
+}
+
+.fiz-product-img img {
+    max-width: 82%;
+    max-height: 82%;
+    object-fit: contain;
+    transition: transform .25s ease;
+}
+
+.fiz-product-card:hover .fiz-product-img img {
+    transform: scale(1.04);
+}
+
+.fiz-product-card .product-item-cover {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 24px 24px 22px;
+}
+
+.fiz-product-card .price-cover {
+    order: 2;
+    margin: 0 0 18px;
+}
+
+.fiz-product-card .price-cover .new-price {
+    color: #192330;
+    font-size: 28px;
+    letter-spacing: .02em;
+}
+
+.fiz-prod-title {
+    order: 1;
+    height: auto;
+    min-height: 54px;
+    margin-bottom: 16px;
+    font-size: 21px;
+    line-height: 1.28;
+    text-transform: none;
+}
+
+.fiz-prod-title a {
+    color: #192330;
+}
+
+.fiz-product-card .btn-buy,
+.fiz-product-card .btn-to-card {
+    width: 100%;
+    border-radius: 999px;
+    text-align: center;
+}
+
+.fiz-product-card .btn-buy {
+    order: 3;
+    justify-content: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.fiz-product-card .in-basket-p {
+    order: 4;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(255, 217, 16, .22);
+    color: #192330;
+    text-align: center;
+    font-weight: 700;
+}
+
+.fiz-product-card .add-to-card-box {
+    order: 5;
+    margin-top: 12px;
+}
+
+.fiz-product-card .add-to-card-input {
+    border-radius: 999px 0 0 999px;
+}
+
+.fiz-product-card .btn-to-card {
+    border-radius: 0 999px 999px 0;
+}
+
+.prod-info.my-prod-info {
+    padding: 0 24px 24px;
+    background: #fff;
+    box-shadow: none;
+}
+
+.product-item:hover .my-prod-info {
+    padding-top: 0;
+    box-shadow: none;
+}
+
+.prod-info-label {
+    margin-bottom: 8px;
+    color: #246e49;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.fiz-product-card .prod-list li {
+    color: #65696C;
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+@media (max-width: 1199px) {
+    .fiz-product-cover .prod-container {
+        width: calc(50% - 15px);
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 767px) {
+    .s-products-fiz {
+        padding-top: 86px;
+    }
+
+    .fiz-products-title-cover {
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-lead {
+        font-size: 16px;
+    }
+
+    .fiz-product-cover {
+        gap: 20px;
+    }
+
+    .fiz-product-cover .prod-container {
+        width: 100%;
+        max-width: 520px;
+    }
+}
+
+@media (max-width: 575px) {
+    .fiz-product-img {
+        height: 220px;
+    }
+
+    .fiz-prod-title {
+        font-size: 19px;
+    }
+}
