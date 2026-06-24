@@ -30,6 +30,7 @@
        
         
         wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/css/animate.css');
+        wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), filemtime( get_template_directory() . '/assets/css/responsive.css' ) );
 
 
  
@@ -66,6 +67,7 @@
 
         wp_enqueue_script( 'fizProductData', get_template_directory_uri() . '/assets/js/data/fizProductData.js', array(), 'null', true );
          wp_enqueue_script( 'basket', get_template_directory_uri() . '/assets/js/basket.js', array(), 'null', true );
+        wp_enqueue_script( 'table-scroll', get_template_directory_uri() . '/assets/js/table-scroll.js', array(), filemtime( get_template_directory() . '/assets/js/table-scroll.js' ), true );
 
 
         wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), 'null', true );
