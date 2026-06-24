@@ -305,6 +305,65 @@
 	<!--================ S-CONTACTS END ================-->
 	
 
+
+	<!--================== S-INMI-KNOWLEDGE ==================-->
+	<section id="inmi-knowledge" class="s-inmi-knowledge">
+		<div class="container">
+			<div class="knowledge-head wow fadeInUp lazy" data-wow-duration=".8s" data-wow-delay=".1s">
+				<div>
+					<p class="knowledge-eyebrow">Экспертная библиотека</p>
+					<h2 class="title knowledge-title">InMi-знания</h2>
+					<p class="knowledge-lead">Практические материалы о микробиологических решениях для растениеводства, животноводства, экологии и промышленной биотехнологии.</p>
+				</div>
+				<?php
+					$knowledge_category = get_category_by_slug('inmi-znaniya');
+					$knowledge_archive_url = $knowledge_category ? get_category_link($knowledge_category->term_id) : home_url('/category/inmi-znaniya/');
+				?>
+				<a class="knowledge-all-link" href="<?php echo esc_url($knowledge_archive_url); ?>">Все статьи <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+			</div>
+
+			<?php
+				$knowledge_posts = get_posts([
+					'numberposts' => 5,
+					'category_name' => 'inmi-znaniya',
+					'post_status' => 'publish',
+				]);
+
+				if (!$knowledge_posts) {
+					$knowledge_posts = get_posts([
+						'numberposts' => 5,
+						'post_status' => 'publish',
+						'category__not_in' => array_filter([
+							get_cat_ID('slider'),
+							get_cat_ID('fiz-cards'),
+						]),
+					]);
+				}
+			?>
+
+			<?php if ($knowledge_posts) : ?>
+				<div class="knowledge-grid">
+					<?php foreach ($knowledge_posts as $index => $post) : setup_postdata($post); ?>
+						<article class="knowledge-card<?php echo $index === 0 ? ' knowledge-card-featured' : ''; ?> wow fadeInUp lazy" data-wow-duration=".8s" data-wow-delay="<?php echo esc_attr(0.12 + ($index * 0.06)); ?>s">
+							<a class="knowledge-card-link" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr(get_the_title()); ?>">
+								<span class="knowledge-card-number"><?php echo esc_html(str_pad($index + 1, 2, '0', STR_PAD_LEFT)); ?></span>
+								<span class="knowledge-card-meta"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo esc_html(get_the_date('d.m.Y')); ?></span>
+								<h3><?php the_title(); ?></h3>
+								<p><?php echo esc_html(wp_trim_words(get_the_excerpt() ? get_the_excerpt() : wp_strip_all_tags(get_the_content()), 24, '...')); ?></p>
+								<span class="knowledge-read-more">Читать материал <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+							</a>
+						</article>
+					<?php endforeach; wp_reset_postdata(); ?>
+				</div>
+			<?php else : ?>
+				<div class="knowledge-empty wow fadeInUp lazy" data-wow-duration=".8s" data-wow-delay=".15s">
+					<p>Скоро здесь появятся экспертные материалы InMi о применении биотехнологий в агросекторе и экологических проектах.</p>
+				</div>
+			<?php endif; ?>
+		</div>
+	</section>
+	<!--================ S-INMI-KNOWLEDGE END ================-->
+
 	<!--================== S-OUR-NEWS ==================-->
 	<section class="s-our-news">
 		<div class="container">
