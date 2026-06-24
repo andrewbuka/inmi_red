@@ -119,9 +119,6 @@ button,
 
 /* Hero slider. */
 .main-slider .main-slide .container {
-    display: flex;
-    align-items: center;
-    gap: clamp(20px, 4vw, 56px);
     min-width: 0;
 }
 
@@ -143,8 +140,6 @@ button,
 
 @media (max-width: 767px) {
     .main-slider .main-slide .container {
-        flex-direction: column;
-        justify-content: center;
         text-align: center;
         min-height: auto;
         padding-top: 34px;
@@ -373,8 +368,32 @@ button,
 .simple-content .table-responsive,
 .table-responsive {
     width: 100%;
+    max-width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+}
+
+/* Keep every site table readable: do not squeeze columns, scroll instead. */
+table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    table-layout: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table th,
+table td {
+    white-space: nowrap;
+    overflow-wrap: normal;
+}
+
+.simple-content table,
+.table-responsive table {
+    margin-bottom: 0;
 }
 
 .simplecheckout-cart {
