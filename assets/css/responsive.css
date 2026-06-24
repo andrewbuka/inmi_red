@@ -381,3 +381,73 @@ button,
         width: 100%;
     }
 }
+
+/* Desktop product intro layout: wider right column and left-aligned calculator button. */
+@media (min-width: 768px) {
+    .my-s-single-product .row {
+        display: grid;
+        grid-template-columns: minmax(300px, 1fr) minmax(220px, 300px) minmax(360px, 430px);
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .my-s-single-product .row > [class*="col-"] {
+        max-width: none;
+        width: 100%;
+        flex: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .my-s-single-product .row > [class*="col-"]:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .my-s-single-product .row > [class*="col-"]:first-child .prod-yur-calc-box {
+        align-self: flex-start;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .my-s-single-product .single-shop-left.my-single-shop-left {
+        min-width: 0;
+    }
+
+    .my-s-single-product .single-shop-left .title.my-title {
+        white-space: nowrap;
+        font-size: clamp(42px, 4vw, 50px);
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .my-s-single-product .row {
+        grid-template-columns: minmax(260px, 1fr) minmax(180px, 260px) minmax(320px, 390px);
+        gap: 28px;
+    }
+
+    .my-s-single-product .single-shop-left .title.my-title {
+        font-size: clamp(36px, 4vw, 44px);
+    }
+}
+
+@media (max-width: 600px) {
+    .responsive-table-scroll {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .responsive-table-scroll table,
+    .table-responsive table,
+    .simple-content .table-responsive table {
+        display: table;
+        width: max-content;
+        min-width: 100%;
+        max-width: none;
+    }
+}
