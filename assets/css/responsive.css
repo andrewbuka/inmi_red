@@ -1,0 +1,453 @@
+/* Global responsive safety net and layout overrides. */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+iframe {
+    max-width: 100%;
+}
+
+img,
+svg,
+video {
+    height: auto;
+}
+
+iframe {
+    border: 0;
+}
+
+.container,
+[class*="container"] {
+    max-width: min(100% - 30px, 1170px);
+}
+
+.row {
+    min-width: 0;
+}
+
+[class*="col-"] {
+    min-width: 0;
+}
+
+p,
+li,
+a,
+span,
+label,
+td,
+th,
+.prod-yur-descr,
+.prod-title a,
+.single-shop-left label {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+input,
+select,
+textarea,
+button,
+.btn,
+.button {
+    max-width: 100%;
+}
+
+/* Header and navigation. */
+.header-menu .container,
+.top-panel-cover {
+    gap: 16px;
+}
+
+.nav-list {
+    flex-wrap: wrap;
+    row-gap: 8px;
+}
+
+.nav-list > li > a {
+    white-space: normal;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .header-menu .container {
+        min-height: 64px;
+    }
+
+    .logo,
+    .logo img,
+    .logo-inmi {
+        max-width: 92px;
+        width: auto;
+    }
+
+    .nav-menu {
+        max-width: 100vw;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav-list > li > a {
+        justify-content: center;
+        padding: 8px 0;
+    }
+
+    .top-panel-cover {
+        justify-content: center;
+        padding-right: 52px;
+    }
+}
+
+@media (max-width: 420px) {
+    .header-menu .container {
+        justify-content: flex-start;
+    }
+
+    .top-panel-cover .icon-right-list li a {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+/* Hero slider. */
+.main-slider .main-slide .container {
+    min-width: 0;
+}
+
+.main-slider .main-slide .main-slide-info,
+.main-slider .main-slide .slide-img-cover {
+    min-width: 0;
+}
+
+.main-slider .main-slide .main-slide-info .title {
+    font-size: clamp(32px, 6vw, 76px);
+    line-height: 0.95;
+}
+
+.main-slider .main-slide .slide-img,
+.main-slider .main-slide .slide-img-cover img {
+    max-height: min(52vh, 520px);
+    object-fit: contain;
+}
+
+@media (max-width: 767px) {
+    .main-slider .main-slide .container {
+        text-align: center;
+        min-height: auto;
+        padding-top: 34px;
+        padding-bottom: 48px;
+    }
+
+    .main-slider .main-slide .main-slide-info {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .main-slider .main-slide .slide-img-cover {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    .slide-btn.more-box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Product grids and cards. */
+.product-cover,
+.my-row.product-cover,
+.shop-product-cover .product-cover {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.prod-container,
+.prod-item-col {
+    width: min(100%, 350px);
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.product-item,
+.product-item-cover,
+.prod-info,
+.product-img {
+    max-width: 100%;
+}
+
+.product-img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 650px) {
+    .prod-container,
+    .prod-item-col {
+        width: min(100%, 420px);
+    }
+
+    .product-item-cover,
+    .prod-info,
+    .block .product-item-cover,
+    .block .prod-info {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+/* Legal-entity catalog. */
+.cathegories-limiter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    align-items: stretch;
+}
+
+.cath-box {
+    width: 100%;
+}
+
+.cath-container {
+    width: min(95%, 1300px);
+}
+
+.prod-yur-item {
+    display: grid !important;
+    grid-template-columns: 120px minmax(220px, 1fr) auto auto;
+    align-items: center;
+}
+
+.prod-yur-img-box {
+    width: 100% !important;
+    max-width: 120px;
+}
+
+.prod-yur-descr-box {
+    max-width: none !important;
+    min-width: 0;
+}
+
+.prod-yur-more-box,
+.prod-yur-calc-box {
+    justify-self: end;
+}
+
+@media (max-width: 900px) {
+    .prod-yur-item {
+        grid-template-columns: 100px minmax(0, 1fr);
+    }
+
+    .prod-yur-more-box,
+    .prod-yur-calc-box {
+        justify-self: start;
+    }
+}
+
+@media (max-width: 560px) {
+    .cathegories {
+        margin-top: 30px;
+    }
+
+    .cathegories-limiter {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .cath-icon {
+        width: 72px;
+    }
+
+    .prod-yur-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .prod-yur-img-box {
+        justify-self: center;
+        border-right: 0 !important;
+        border-bottom: 1px solid #b2b2b1;
+        padding-bottom: 10px;
+    }
+
+    .prod-yur-more-box,
+    .prod-yur-calc-box {
+        justify-self: stretch;
+    }
+
+    .prod-yur-more-box .btn,
+    .prod-yur-calc-box .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .cathegories-limiter {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Basket and checkout. */
+.all-product-basket-container {
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.all-product-basket,
+.all-order-info {
+    flex: 1 1 320px;
+    max-width: 100%;
+}
+
+.prod-item {
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    .simple-content .table-responsive,
+    .table-responsive {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Keep tables readable on narrow screens: do not squeeze columns, scroll instead. */
+    table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        table-layout: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table th,
+    table td {
+        white-space: nowrap;
+        overflow-wrap: normal;
+    }
+
+    .simple-content table,
+    .table-responsive table {
+        margin-bottom: 0;
+    }
+
+    .simplecheckout-cart {
+        min-width: 620px;
+    }
+}
+
+@media (max-width: 640px) {
+    .all-product-basket-container {
+        width: min(100% - 20px, 1500px);
+        gap: 20px;
+    }
+
+    .prod-item {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .all-order-info {
+        padding: 24px 18px;
+    }
+
+    .simplecheckout-button-right,
+    .simplecheckout-button-left {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .simplecheckout-button-right .btn,
+    .simplecheckout-button-right .button {
+        width: 100%;
+    }
+}
+
+/* Desktop product intro layout: wider right column and left-aligned calculator button. */
+@media (min-width: 768px) {
+    .my-s-single-product .row {
+        display: grid;
+        grid-template-columns: minmax(300px, 1fr) minmax(220px, 300px) minmax(360px, 430px);
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .my-s-single-product .row > [class*="col-"] {
+        max-width: none;
+        width: 100%;
+        flex: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .my-s-single-product .row > [class*="col-"]:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .my-s-single-product .row > [class*="col-"]:first-child .prod-yur-calc-box {
+        align-self: flex-start;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .my-s-single-product .single-shop-left.my-single-shop-left {
+        min-width: 0;
+    }
+
+    .my-s-single-product .single-shop-left .title.my-title {
+        white-space: nowrap;
+        font-size: clamp(42px, 4vw, 50px);
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .my-s-single-product .row {
+        grid-template-columns: minmax(260px, 1fr) minmax(180px, 260px) minmax(320px, 390px);
+        gap: 28px;
+    }
+
+    .my-s-single-product .single-shop-left .title.my-title {
+        font-size: clamp(36px, 4vw, 44px);
+    }
+}
+
+@media (max-width: 600px) {
+    .responsive-table-scroll {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .responsive-table-scroll table,
+    .table-responsive table,
+    .simple-content .table-responsive table {
+        display: table;
+        width: max-content;
+        min-width: 100%;
+        max-width: none;
+    }
+}
