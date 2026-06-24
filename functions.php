@@ -30,6 +30,7 @@
        
         
         wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/css/animate.css');
+        wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), filemtime( get_template_directory() . '/assets/css/responsive.css' ) );
 
 
  
