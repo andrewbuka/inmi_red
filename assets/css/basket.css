@@ -430,3 +430,170 @@
         display: block;
     }
 }
+
+@media (max-width: 500px) {
+    .checkout-page-content {
+        width: calc(100% - 16px);
+    }
+
+    .checkout-redesign #simplecheckout_cart > .table-responsive {
+        overflow: visible;
+        border-radius: 18px 18px 0 0;
+    }
+
+    .checkout-redesign .simplecheckout-cart,
+    .checkout-redesign .simplecheckout-cart tbody,
+    .checkout-redesign .simplecheckout-cart tr,
+    .checkout-redesign .simplecheckout-cart td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .checkout-redesign .simplecheckout-cart thead,
+    .checkout-redesign .simplecheckout-cart colgroup {
+        display: none;
+    }
+
+    .checkout-redesign .simplecheckout-cart .prod-item-tr {
+        display: grid !important;
+        grid-template-columns: 96px minmax(0, 1fr);
+        gap: 12px 14px;
+        padding: 16px;
+        border-bottom: 1px solid #edf1f6;
+        background: #fff;
+    }
+
+    .checkout-redesign .simplecheckout-cart .prod-item-tr:last-child {
+        border-bottom: 0;
+    }
+
+    .checkout-redesign .simplecheckout-cart .td-box,
+    .checkout-redesign .simplecheckout-cart .td-box-name,
+    .checkout-redesign .simplecheckout-cart td.quantity,
+    .checkout-redesign .simplecheckout-cart td.price,
+    .checkout-redesign .simplecheckout-cart td.total {
+        padding: 0;
+        border: 0;
+        text-align: left;
+    }
+
+    .checkout-redesign .simplecheckout-cart .td-box {
+        grid-row: 1 / span 3;
+        align-self: start;
+    }
+
+    .checkout-redesign .simplecheckout-cart .basket-item-img {
+        display: block;
+        width: 96px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .checkout-redesign .simplecheckout-cart .td-box-name {
+        align-self: center;
+        color: #202b40;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.35;
+    }
+
+    .checkout-redesign .simplecheckout-cart td.quantity {
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 0;
+        white-space: normal;
+    }
+
+    .checkout-redesign .simplecheckout-cart td.quantity::before {
+        content: "Кол-во";
+        min-width: 58px;
+        margin-right: 10px;
+        color: #6b7688;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .checkout-redesign .simplecheckout-cart td.quantity .input-group {
+        display: inline-flex;
+        align-items: center;
+        width: auto;
+        max-width: 132px;
+        margin: 0 !important;
+        overflow: hidden;
+        border: 1px solid #dbe2ec;
+        border-radius: 12px;
+        background: #fff;
+    }
+
+    .checkout-redesign .minus-btn-basket,
+    .checkout-redesign .plus-btn-basket,
+    .checkout-redesign .delete-btn-basket {
+        width: 32px;
+        height: 34px;
+        min-width: 32px;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: #202b40;
+        color: #fff;
+        font-size: 16px;
+        line-height: 34px;
+    }
+
+    .checkout-redesign .delete-btn-basket {
+        background: #f1f4f8;
+        color: #202b40;
+        font-size: 12px;
+        font-weight: 800;
+    }
+
+    .checkout-redesign .input-btn-basket {
+        width: 38px;
+        min-width: 38px;
+        height: 34px;
+        padding: 0;
+        border: 0;
+        border-left: 1px solid #dbe2ec;
+        border-right: 1px solid #dbe2ec;
+        text-align: center;
+    }
+
+    .checkout-redesign .simplecheckout-cart td.price,
+    .checkout-redesign .simplecheckout-cart td.total {
+        display: flex !important;
+        grid-column: 1 / -1;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 12px;
+        border-top: 1px solid #edf1f6;
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .checkout-redesign .simplecheckout-cart td.price::before {
+        content: "Цена";
+        color: #6b7688;
+        font-weight: 700;
+    }
+
+    .checkout-redesign .simplecheckout-cart td.total::before {
+        content: "Итого";
+        color: #6b7688;
+        font-weight: 700;
+    }
+
+    .checkout-redesign .simplecheckout-cart-total {
+        justify-content: space-between;
+        gap: 8px;
+        padding: 14px 16px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .checkout-redesign #total_total .simplecheckout-cart-total-value {
+        font-size: 20px;
+    }
+}
